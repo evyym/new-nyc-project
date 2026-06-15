@@ -1,6 +1,6 @@
 let data, info, output, result;
 
-async function init() {
+async function init(){
 
     let link = "data.json";
 
@@ -35,7 +35,7 @@ async function init() {
     output.innerHTML = build;
 }
 
-function filterBorough() {
+function filterborough(){
 
     let borough = document.getElementById("borough").value;
 
@@ -66,7 +66,7 @@ function filterBorough() {
     output.innerHTML = build;
 }
 
-function filterCrime() {
+function filtercrime() {
 
     let offense = document.getElementById("crime").value;
 
@@ -132,28 +132,28 @@ function filterBorough(){
     let crime = data[i];
 
     if(crime.boro_nm == "BROOKLYN"){
-      b++;
+      br++;
     }else if(crime.boro_nm == "MANHATTAN"){
       m++;
     }else if(crime.boro_nm == "QUEENS"){
       q++;
     }else if(crime.boro_nm == "BRONX"){
-      x++;
+      b++;
     }else if(crime.boro_nm == "STATEN ISLAND"){
-      s++;
+      si++;
     }
 
   }
 
   let chartData = [
-    ["Brooklyn", b],
+    ["Brooklyn", br],
     ["Manhattan", m],
     ["Queens", q],
-    ["Bronx", x],
-    ["Staten Island", s]
+    ["Bronx", b],
+    ["Staten Island", si]
   ];
 
-  let chartType = get("chartType").value;
+  let chartType = document.getElementById("chartType").value;
 
   displayChart(chartData, "chart", chartType);
 }
