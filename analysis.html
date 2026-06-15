@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h2>NYC Crime Dashboard</h2>
+
+    <ul>
+        <a href="index.html">Home</a>
+        <a href="analysis.html">Analysis</a>
+        <a href="info.html">information</a>
+    </ul>
+</nav>
+
+
+
+  <body onload="init()">
+   
+    <div class="container">
+      <div id="panel">
+       
+        <div class="card">
+          <h3>Select Chart Type</h3>
+          <select id="chartType" style="width:100px;">
+            <option value="bar">Bar</option>
+            <option value="pie">Pie</option>
+            <option value = "donut">Donut</option>
+          </select>
+        </div>
+       
+        <div class="card">
+          <h3>borough</h3>
+          <p><span class="highlight"></span>Find crime by borough.</p>
+          <a class="button" onclick="filterBorough()"> Show Chart </a>
+        </div>
+       
+        <div class="card">
+          <h3>crime type</h3>
+          <p><span class="highlight"></span>find the type of crime.</p>
+          <a class="button" onclick="filterCrime()"> Show Chart </a>
+        </div>
+      </div>
+
+     
+      <div class="card">
+       <div id="chart"></div>
+      </div>
+    </div>

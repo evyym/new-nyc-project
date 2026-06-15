@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>NYC Crime Data Explorer</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body onload="init()">
+
+    <!-- Navigation -->
+
+    <nav class = "container">
+        <h2>NYC Crime Dashboard</h2>
+            <a href="index.html">Home</a>
+            <a href="info.html">Information</a>
+            <a href="analysis.html">Analysis</a>
+            
+    </nav>
+</body>
+
+    <!-- Page Header -->
+
+    <section class="page-title">
+        <h1>NYC Crime Data Explorer</h1>
+
+        <p>
+            Explore crime incidents reported across New York City using data from
+            NYC Open Data. Search by borough or crime type to investigate patterns
+            and trends throughout the city.
+        </p>
+    </section>
+
+    <!-- Dataset Description -->
+
+    <section class="dataset-info">
+
+        <div class="info-card">
+            <h2>About the Dataset</h2>
+
+            <p>
+                This dataset contains reported crime incidents from the New York
+                City Police Department (NYPD). Each record includes information
+                such as the offense type, borough, date, and location of the
+                reported incident.
+            </p>
+
+            <p>
+                The data helps identify crime trends, compare boroughs, and
+                understand public safety patterns across New York City.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- Search Section -->
+
+    <div class="container">
+        <div class="Leftpanel">
+            <div class="card">
+                <h3>Search by Borough</h3>
+
+                <input
+                    type="text"
+                    id="borough"
+                    placeholder="Enter borough..."
+                >
+
+                <button onclick="filterBorough()">
+                    Search
+                </button>
+            </div>
+
+            <div class="filter-card">
+                <h3>Search by Crime Type</h3>
+
+                <input
+                    type="text"
+                    id="crime"
+                    placeholder="Robbery, Assault, Burglary..."
+                >
+
+                <button onclick="filterCrime()">
+                    Search
+                </button>
+            </div>
+
+            <div class="filter-card">
+                <h3>View Entire Dataset</h3>
+
+                <button onclick="showAll()">
+                    Show All Records
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Results Panel -->
+
+        <div class="output">
+
+            <h2>Search Results</h2>
+
+            <div id="result"></div>
+
+            <div id="output" class="cards">
+                <p>
+                    Use the search tools to display matching crime records.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

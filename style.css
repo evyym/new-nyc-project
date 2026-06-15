@@ -1,0 +1,1130 @@
+
+
+*{
+   margin:0;
+   padding:0;
+   box-sizing:border-box;
+   font-family:Arial, Helvetica, sans-serif;
+}
+
+
+body{
+   background:#f4f6fb;
+}
+
+
+nav{
+   background:#111;
+   color:white;
+
+
+   display:flex;
+   justify-content:space-between;
+   align-items:center;
+
+
+   padding:20px 40px;
+}
+
+
+nav ul{
+   display:flex;
+   list-style:none;
+   gap:30px;
+}
+
+
+nav a{
+   color:white;
+   text-decoration:none;
+}
+
+
+.hero{
+   height:85vh;
+
+
+   background:
+   linear-gradient(
+       rgba(0,0,0,.4),
+       rgba(0,0,0,.4)
+   ),
+   url("https://images.unsplash.com/photo-1485738422979-f5c462d49f74");
+
+
+   background-size:cover;
+   background-position:center;
+
+
+   display:flex;
+   align-items:center;
+}
+
+
+.overlay{
+   background:rgba(0,0,0,.55);
+
+
+   color:white;
+
+
+   margin-left:60px;
+
+
+   padding:50px;
+   width:600px;
+}
+
+
+.overlay h1{
+   font-size:4rem;
+   margin-bottom:20px;
+}
+
+
+.overlay p{
+   font-size:1.2rem;
+   margin-bottom:30px;
+}
+
+
+.btn{
+   background:#e63946;
+   color:white;
+
+
+   text-decoration:none;
+
+
+   padding:15px 30px;
+
+
+   border-radius:5px;
+}
+
+
+.cards{
+   display:grid;
+
+
+   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+
+   gap:30px;
+
+
+   padding:60px;
+}
+
+
+.card{
+   background:white;
+
+
+   padding:30px;
+
+
+   border-radius:15px;
+
+
+   box-shadow:0 10px 20px rgba(0,0,0,.1);
+}
+
+
+.card h2{
+   margin-bottom:15px;
+}
+
+
+.info{
+   text-align:center;
+   padding:60px;
+}
+
+
+.page-title{
+   text-align:center;
+   padding:40px;
+   background:linear-gradient(
+       135deg,
+       #3f51b5,
+       #5c6bc0
+   );
+   color:white;
+}
+
+
+.analysis-grid{
+   display:grid;
+
+
+   grid-template-columns:repeat(2,1fr);
+
+
+   gap:25px;
+
+
+   padding:40px;
+}
+
+
+.large-card{
+   min-height:220px;
+}
+
+
+.chart-grid{
+   display:grid;
+
+
+   grid-template-columns:repeat(2,1fr);
+
+
+   gap:25px;
+
+
+   padding:40px;
+}
+
+
+.chart-card{
+   background:white;
+
+
+   border-radius:15px;
+
+
+   padding:20px;
+
+
+   box-shadow:0 8px 20px rgba(0,0,0,.1);
+}
+
+
+.chart-card h2{
+   text-align:center;
+   margin-bottom:20px;
+}
+
+
+canvas{
+   width:100%;
+   height:350px;
+}
+
+
+@media(max-width:900px){
+
+
+   .chart-grid{
+       grid-template-columns:1fr;
+   }
+
+
+   .analysis-grid{
+       grid-template-columns:1fr;
+   }
+
+
+   .overlay{
+       width:90%;
+       margin:auto;
+   }
+
+
+   .overlay h1{font-size:2.5rem;}
+
+
+  
+   .chart-container{
+   display:flex;
+   gap:30px;
+   padding:30px;
+}
+
+
+/* LEFT SIDE */
+.sidebar{
+   width:280px;
+}
+
+
+.filter-card{
+   background:white;
+
+
+   border:1px solid #999;
+
+
+   padding:25px;
+
+
+   margin-bottom:25px;
+
+
+   box-shadow:0 3px 8px rgba(0,0,0,.1);
+}
+
+
+.filter-card h3{
+   margin-bottom:20px;
+}
+
+
+.filter-card select{
+   width:100%;
+
+
+   padding:10px;
+
+
+   margin-bottom:15px;
+}
+
+
+.filter-card button{
+
+
+   background:#001eff;
+
+
+   color:white;
+
+
+   border:none;
+
+
+   padding:12px 25px;
+
+
+   border-radius:8px;
+
+
+   cursor:pointer;
+
+
+   box-shadow:0 4px 8px rgba(0,0,0,.3);
+
+
+   transition:.3s;
+}
+
+
+.filter-card button:hover{
+
+
+   transform:translateY(-2px);
+
+
+   background:#0000cc;
+}
+
+
+/* OUTPUT AREA */
+
+
+.output{
+   flex:1;
+
+
+   background:white;
+
+
+   border:1px solid #999;
+
+
+   padding:30px;
+}
+
+
+.output h1{
+   text-align:center;
+   margin-bottom:30px;
+}
+
+
+.chart-grid{
+   display:grid;
+
+
+   grid-template-columns:repeat(2,1fr);
+
+
+   gap:25px;
+}
+
+
+.chart-card{
+
+
+   background:#f8f9fd;
+
+
+   border-radius:15px;
+
+
+   padding:20px;
+
+
+   box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+.dashboard-header{
+
+
+   background:linear-gradient(
+       135deg,
+       #001eff,
+       #4f6fff
+   );
+
+
+   color:white;
+
+
+   text-align:center;
+
+
+   padding:50px;
+}
+
+
+.chart-container{
+
+
+   display:flex;
+
+
+   gap:25px;
+
+
+   padding:30px;
+}
+
+
+.sidebar{
+
+
+   width:300px;
+}
+
+
+.filter-card{
+
+
+   background:white;
+
+
+   padding:20px;
+
+
+   margin-bottom:20px;
+
+
+   border-radius:12px;
+
+
+   box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+
+.filter-card h3{
+
+
+   margin-bottom:15px;
+}
+
+
+.filter-card input,
+.filter-card select{
+
+
+   width:100%;
+
+
+   padding:10px;
+
+
+   border:1px solid #ddd;
+
+
+   border-radius:5px;
+
+
+   margin-bottom:15px;
+}
+
+
+.filter-card button{
+
+
+   width:100%;
+
+
+   background:#001eff;
+
+
+   color:white;
+
+
+   border:none;
+
+
+   padding:12px;
+
+
+   border-radius:8px;
+
+
+   cursor:pointer;
+
+
+   transition:.3s;
+}
+
+
+.filter-card button:hover{
+
+
+   background:#0000b3;
+}
+
+
+.output{
+
+
+   flex:1;
+}
+
+
+.output h2{
+
+
+   margin-bottom:20px;
+
+
+   text-align:center;
+}
+
+
+.chart-card{
+
+
+   background:white;
+
+
+   padding:30px;
+
+
+   border-radius:15px;
+
+
+   box-shadow:0 10px 20px rgba(0,0,0,.1);
+}
+
+
+canvas{
+
+
+   max-height:600px;
+}
+
+
+@media(max-width:900px){
+
+
+   .chart-container{
+
+
+       flex-direction:column;
+   }
+
+
+   .sidebar{
+
+
+       width:100%;
+   }
+
+
+   .card{
+   border:1px solid black;
+   padding:10px;
+   margin:10px;
+}
+}
+}
+
+
+*{
+   margin:0;
+   padding:0;
+   box-sizing:border-box;
+   font-family:Arial, Helvetica, sans-serif;
+}
+
+
+body{
+   background:#f4f6fb;
+}
+
+
+nav{
+   background:#111;
+   color:white;
+
+
+   display:flex;
+   justify-content:space-between;
+   align-items:center;
+
+
+   padding:20px 40px;
+}
+
+
+nav ul{
+   display:flex;
+   list-style:none;
+   gap:30px;
+}
+
+
+nav a{
+   color:white;
+   text-decoration:none;
+}
+
+
+.hero{
+   height:85vh;
+
+
+   background:
+   linear-gradient(
+       rgba(0,0,0,.4),
+       rgba(0,0,0,.4)
+   ),
+   url("https://images.unsplash.com/photo-1485738422979-f5c462d49f74");
+
+
+   background-size:cover;
+   background-position:center;
+
+
+   display:flex;
+   align-items:center;
+}
+
+
+.overlay{
+   background:rgba(0,0,0,.55);
+
+
+   color:white;
+
+
+   margin-left:60px;
+
+
+   padding:50px;
+   width:600px;
+}
+
+
+.overlay h1{
+   font-size:4rem;
+   margin-bottom:20px;
+}
+
+
+.overlay p{
+   font-size:1.2rem;
+   margin-bottom:30px;
+}
+
+
+.btn{
+   background:#e63946;
+   color:white;
+
+
+   text-decoration:none;
+
+
+   padding:15px 30px;
+
+
+   border-radius:5px;
+}
+
+
+.cards{
+   display:grid;
+
+
+   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+
+   gap:30px;
+
+
+   padding:60px;
+}
+
+
+.card{
+   background:white;
+
+
+   padding:30px;
+
+
+   border-radius:15px;
+
+
+   box-shadow:0 10px 20px rgba(0,0,0,.1);
+}
+
+
+.card h2{
+   margin-bottom:15px;
+}
+
+
+.info{
+   text-align:center;
+   padding:60px;
+}
+
+
+.page-title{
+   text-align:center;
+   padding:40px;
+   background:linear-gradient(
+       135deg,
+       #3f51b5,
+       #5c6bc0
+   );
+   color:white;
+}
+
+
+.analysis-grid{
+   display:grid;
+
+
+   grid-template-columns:repeat(2,1fr);
+
+
+   gap:25px;
+
+
+   padding:40px;
+}
+
+
+.large-card{
+   min-height:220px;
+}
+
+
+.chart-grid{
+   display:grid;
+
+
+   grid-template-columns:repeat(2,1fr);
+
+
+   gap:25px;
+
+
+   padding:40px;
+}
+
+
+.chart-card{
+   background:white;
+
+
+   border-radius:15px;
+
+
+   padding:20px;
+
+
+   box-shadow:0 8px 20px rgba(0,0,0,.1);
+}
+
+
+.chart-card h2{
+   text-align:center;
+   margin-bottom:20px;
+}
+
+
+canvas{
+   width:100%;
+   height:350px;
+}
+
+
+@media(max-width:900px){
+
+
+   .chart-grid{
+       grid-template-columns:1fr;
+   }
+
+
+   .analysis-grid{
+       grid-template-columns:1fr;
+   }
+
+
+   .overlay{
+       width:90%;
+       margin:auto;
+   }
+
+
+   .overlay h1{font-size:2.5rem;}
+
+
+  
+   .chart-container{
+   display:flex;
+   gap:30px;
+   padding:30px;
+}
+
+
+/* LEFT SIDE */
+.sidebar{
+   width:280px;
+}
+
+
+.filter-card{
+   background:white;
+
+
+   border:1px solid #999;
+
+
+   padding:25px;
+
+
+   margin-bottom:25px;
+
+
+   box-shadow:0 3px 8px rgba(0,0,0,.1);
+}
+
+
+.filter-card h3{
+   margin-bottom:20px;
+}
+
+
+.filter-card select{
+   width:100%;
+
+
+   padding:10px;
+
+
+   margin-bottom:15px;
+}
+
+
+.filter-card button{
+
+
+   background:#001eff;
+
+
+   color:white;
+
+
+   border:none;
+
+
+   padding:12px 25px;
+
+
+   border-radius:8px;
+
+
+   cursor:pointer;
+
+
+   box-shadow:0 4px 8px rgba(0,0,0,.3);
+
+
+   transition:.3s;
+}
+
+
+.filter-card button:hover{
+
+
+   transform:translateY(-2px);
+
+
+   background:#0000cc;
+}
+
+
+/* OUTPUT AREA */
+
+
+.output{
+   flex:1;
+
+
+   background:white;
+
+
+   border:1px solid #999;
+
+
+   padding:30px;
+}
+
+
+.output h1{
+   text-align:center;
+   margin-bottom:30px;
+}
+
+
+.chart-grid{
+   display:grid;
+
+
+   grid-template-columns:repeat(2,1fr);
+
+
+   gap:25px;
+}
+
+
+.chart-card{
+
+
+   background:#f8f9fd;
+
+
+   border-radius:15px;
+
+
+   padding:20px;
+
+
+   box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+.dashboard-header{
+
+
+   background:linear-gradient(
+       135deg,
+       #001eff,
+       #4f6fff
+   );
+
+
+   color:white;
+
+
+   text-align:center;
+
+
+   padding:50px;
+}
+
+
+.chart-container{
+
+
+   display:flex;
+
+
+   gap:25px;
+
+
+   padding:30px;
+}
+
+
+.sidebar{
+
+
+   width:300px;
+}
+
+
+.filter-card{
+
+
+   background:white;
+
+
+   padding:20px;
+
+
+   margin-bottom:20px;
+
+
+   border-radius:12px;
+
+
+   box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+
+.filter-card h3{
+
+
+   margin-bottom:15px;
+}
+
+
+.filter-card input,
+.filter-card select{
+
+
+   width:100%;
+
+
+   padding:10px;
+
+
+   border:1px solid #ddd;
+
+
+   border-radius:5px;
+
+
+   margin-bottom:15px;
+}
+
+
+.filter-card button{
+
+
+   width:100%;
+
+
+   background:#001eff;
+
+
+   color:white;
+
+
+   border:none;
+
+
+   padding:12px;
+
+
+   border-radius:8px;
+
+
+   cursor:pointer;
+
+
+   transition:.3s;
+}
+
+
+.filter-card button:hover{
+
+
+   background:#0000b3;
+}
+
+
+.output{
+
+
+   flex:1;
+}
+
+
+.output h2{
+
+
+   margin-bottom:20px;
+
+
+   text-align:center;
+}
+
+
+.chart-card{
+
+
+   background:white;
+
+
+   padding:30px;
+
+
+   border-radius:15px;
+
+
+   box-shadow:0 10px 20px rgba(0,0,0,.1);
+}
+
+
+canvas{
+
+
+   max-height:600px;
+}
+
+
+@media(max-width:900px){
+
+
+   .chart-container{
+
+
+       flex-direction:column;
+   }
+
+
+   .sidebar{
+
+
+       width:100%;
+   }
+
+
+   .card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+}
+
+/* your JS uses BOTH "fitted" and "card" */
+.fitted{
+    border:1px solid #ddd;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.card p{
+    margin:8px 0;
+}
+
+.card hr{
+    margin:10px 0;
+}
+}
+}
+
+
